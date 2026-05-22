@@ -1,0 +1,9 @@
+name: E2E Windows
+on: [push]
+jobs:
+  e2e:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run e2e
